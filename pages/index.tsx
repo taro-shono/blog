@@ -17,7 +17,7 @@ export const getStaticProps = async () => {
   };
 };
 
-const Blog = ({ allPosts }: Props) => {
+const Top = ({ allPosts }: Props) => {
   const posts = allPosts;
 
   return (
@@ -25,6 +25,9 @@ const Blog = ({ allPosts }: Props) => {
       <Layout>
         <Head>
           <title>blog</title>
+          <meta name="description" content="This is hanagejet blog" />
+          <meta property="og:title" content="hanagejet blog" />
+          <meta property="og:description" content="This is hanagejet blog" />
         </Head>
         {!!posts.length && <Articles posts={posts} />}
       </Layout>
@@ -32,4 +35,4 @@ const Blog = ({ allPosts }: Props) => {
   );
 };
 
-export default Blog;
+export default Top;

@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
   }
   a {
     text-decoration: none;
+    cursor: pointer;
   }
   img {
     width: 100%;

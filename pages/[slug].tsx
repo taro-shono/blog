@@ -61,6 +61,7 @@ const Post = ({ post, morePosts, preview }: Props) => {
         <>
           <Head>
             <title>{post.title} | blog</title>
+            <meta property="og:title" content={`${post.title} | 'blog'`} />
           </Head>
           <Article post={post} />
         </>

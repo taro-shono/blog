@@ -21,7 +21,6 @@ const A = styled.a`
   border-top: 1px solid ${rgba('#000', 0.08)};
   align-items: flex-start;
   color: #000;
-  cursor: pointer;
 `;
 const Title = styled.h2`
   margin: 0;
@@ -31,9 +30,11 @@ const Content = styled.div``;
 const Date = styled.div`
   line-height: 32px;
   flex-basis: 80px;
+  color: ${rgba('#000', 0.64)};
 `;
 const Description = styled.p`
   margin: 4px 0 0;
+  color: ${rgba('#000', 0.64)};
 `;
 
 export const Articles: React.FC<Props> = ({ posts, ...other }) => {

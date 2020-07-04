@@ -1,4 +1,5 @@
 import React from 'react';
+import dayjs from 'dayjs';
 import styled from 'styled-components';
 import { rgba } from 'polished';
 import { Post } from '../../types/post';
@@ -78,7 +79,7 @@ export const Article: React.FC<Props> = ({ post, ...other }) => {
   return (
     <Container {...other}>
       <Body>
-        <Date>{date}</Date>
+        <Date>{dayjs(date).format('YYYY/MM/DD')}</Date>
         <Title>{title}</Title>
         <Content dangerouslySetInnerHTML={{ __html: content }} />
       </Body>
