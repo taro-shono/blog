@@ -1,6 +1,6 @@
 import React from 'react';
-import { getAllPosts } from '../lib/api';
 import Head from 'next/head';
+import { getAllPosts } from '../lib/api';
 import { Layout } from '../components/Layout';
 import { Post } from '../types/post';
 import { Articles } from '../components/Articles';

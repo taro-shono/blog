@@ -1,7 +1,8 @@
+import React from 'react';
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
-import { getPostBySlug, getAllPosts } from '../lib/api';
 import Head from 'next/head';
+import { getPostBySlug, getAllPosts } from '../lib/api';
 import markdownToHtml from '../lib/markdownToHtml';
 import { Post as TPost } from '../types/post';
 import { Article } from '../components/Article';
@@ -9,8 +10,6 @@ import { Layout } from '../components/Layout';
 
 interface Props {
   post: TPost;
-  morePosts: TPost[];
-  preview?: boolean;
 }
 
 interface Params {
@@ -48,7 +47,7 @@ export async function getStaticPaths() {
   };
 }
 
-const Post = ({ post, morePosts, preview }: Props) => {
+const Post = ({ post }: Props) => {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
