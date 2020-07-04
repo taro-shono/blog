@@ -1,11 +1,11 @@
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
-import { getPostBySlug, getAllPosts } from '../../lib/api';
+import { getPostBySlug, getAllPosts } from '../lib/api';
 import Head from 'next/head';
-import markdownToHtml from '../../lib/markdownToHtml';
-import { Post as TPost } from '../../types/post';
-import { Article } from '../../components/Article';
-import { Layout } from '../../components/Layout';
+import markdownToHtml from '../lib/markdownToHtml';
+import { Post as TPost } from '../types/post';
+import { Article } from '../components/Article';
+import { Layout } from '../components/Layout';
 
 interface Props {
   post: TPost;

@@ -1,9 +1,9 @@
 import React from 'react';
-import { getAllPosts } from '../../lib/api';
+import { getAllPosts } from '../lib/api';
 import Head from 'next/head';
-import { Layout } from '../../components/Layout';
-import { Post } from '../../types/post';
-import { Articles } from '../../components/Articles';
+import { Layout } from '../components/Layout';
+import { Post } from '../types/post';
+import { Articles } from '../components/Articles';
 
 interface Props {
   allPosts: Post[];
