@@ -1,0 +1,25 @@
+{
+  "extends": ["config:base"],
+  "pin": {
+    "automerge": true
+  },
+  "patch": {
+    "automerge": true,
+    "groupName": "patch dependencies"
+  },
+  "minor": {
+    "groupName": "minor dependencies"
+  },
+  "dependencies": {
+    "labels": ["Renovate"],
+    "vulnerabilityAlerts": {
+      "labels": ["Renovate", "Security"]
+    }
+  },
+  "devDependencies": {
+    "labels": ["Renovate"],
+    "vulnerabilityAlerts": {
+      "labels": ["Renovate", "Security"]
+    }
+  }
+}
