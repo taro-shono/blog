@@ -41,7 +41,7 @@ export const Articles: React.FC<Props> = ({ posts, ...other }) => {
     <Container {...other}>
       {posts.map((item) => (
         <Section key={item.title}>
-          <Link as={`/blog/${item.slug}`} href="/blog/[slug]">
+          <Link as={`/${item.slug}`} href="/[slug]">
             <A>
               <Date>{dayjs(item.date).format('MM/DD')}</Date>
               <Content>
