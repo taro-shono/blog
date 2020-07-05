@@ -19,6 +19,11 @@ const Logo = styled.h1`
 `;
 const A = styled.a`
   color: #000;
+  path {
+    @media (prefers-color-scheme: dark) {
+      fill: ${(props) => props.theme.colors.text};
+    }
+  }
 `;
 
 export const Layout: React.FC<Props> = ({ children, ...other }) => {

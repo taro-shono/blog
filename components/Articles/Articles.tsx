@@ -20,7 +20,9 @@ const A = styled.a`
   padding: 16px 0 40px;
   border-top: 1px solid ${rgba('#000', 0.08)};
   align-items: flex-start;
-  color: #000;
+  @media (prefers-color-scheme: dark) {
+    border-top: 1px solid ${rgba('#fff', 0.08)};
+  }
 `;
 const Title = styled.h2`
   margin: 0;
@@ -31,10 +33,16 @@ const Date = styled.div`
   line-height: 32px;
   flex-basis: 80px;
   color: ${rgba('#000', 0.64)};
+  @media (prefers-color-scheme: dark) {
+    color: ${(props) => rgba(props.theme.colors.text, 0.64)};
+  }
 `;
 const Description = styled.p`
   margin: 4px 0 0;
   color: ${rgba('#000', 0.64)};
+  @media (prefers-color-scheme: dark) {
+    color: ${(props) => rgba(props.theme.colors.text, 0.64)};
+  }
 `;
 
 export const Articles: React.FC<Props> = ({ posts, ...other }) => {
