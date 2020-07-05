@@ -1,7 +1,7 @@
 import Sanitize from 'styled-sanitize.css';
 import { createGlobalStyle } from 'styled-components';
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   ${Sanitize};
   html {
     height: 100%;
@@ -13,10 +13,18 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-size: 14px;
     font-family: sans-serif;
+    @media (prefers-color-scheme: dark) {
+      background: ${(props) => props.theme.colors.background};
+      color: ${(props) => props.theme.colors.text};
+    }
   }
   a {
+    color: ${(props) => props.theme.colors.text};
     text-decoration: none;
     cursor: pointer;
+    @media (prefers-color-scheme: dark) {
+      color: ${(props) => props.theme.colors.text};
+    }
   }
   img {
     width: 100%;
@@ -25,5 +33,3 @@ const GlobalStyle = createGlobalStyle`
     font-size: 14px;
   }
 `;
-
-export default GlobalStyle;
