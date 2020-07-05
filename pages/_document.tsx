@@ -41,7 +41,7 @@ export default class MyDocument extends Document<Props> {
 
   render() {
     return (
-      <Html>
+      <Html lang="ja-JP">
         <Head />
         <body>
           <Main />
