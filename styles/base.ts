@@ -13,6 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-size: 14px;
     font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
     @media (prefers-color-scheme: dark) {
       background: ${(props) => props.theme.colors.background};
       color: ${(props) => props.theme.colors.text};
