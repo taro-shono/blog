@@ -20,7 +20,7 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
   a {
-    color: ${(props) => props.theme.colors.text};
+    color: ${(props) => props.theme.colors.background};
     text-decoration: none;
     cursor: pointer;
     @media (prefers-color-scheme: dark) {
