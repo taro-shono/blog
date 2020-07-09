@@ -3,6 +3,7 @@ import dayjs from 'dayjs';
 import styled from 'styled-components';
 import { rgba } from 'polished';
 import { Post } from '../../types/post';
+import { light, dark } from '../../themes';
 
 interface Props {
   post: Post;
@@ -52,12 +53,12 @@ const Content = styled.div`
   }
   pre {
     overflow-x: auto;
-    background: ${rgba('#000', 0.08)};
+    background: ${rgba(light.colors.fg, 0.08)};
     border-radius: 8px;
     line-height: 1.8;
     padding: 24px;
     @media (prefers-color-scheme: dark) {
-      background: ${rgba('#fff', 0.08)};
+      background: ${rgba(dark.colors.fg, 0.08)};
     }
     > code {
       padding: 0;
@@ -68,9 +69,9 @@ const Content = styled.div`
   code {
     padding: 4px 8px;
     border-radius: 6px;
-    background: ${rgba('#000', 0.08)};
+    background: ${rgba(light.colors.fg, 0.08)};
     @media (prefers-color-scheme: dark) {
-      background: ${rgba('#fff', 0.08)};
+      background: ${rgba(dark.colors.fg, 0.08)};
     }
   }
   a {
