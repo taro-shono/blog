@@ -1,6 +1,6 @@
 export const light = {
   colors: {
-    background: '#fff',
-    text: '#000',
+    bg: '#fff',
+    fg: '#000',
   },
 };

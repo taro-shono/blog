@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import { rgba } from 'polished';
 import { Post } from '../../types/post';
+import { dark, light } from '../../themes';
 
 interface Props {
   posts: Post[];
@@ -14,15 +15,16 @@ const Container = styled.div`
   margin: 0 auto;
   padding: 0 24px;
 `;
-const Section = styled.section``;
+const Section = styled.section`
+  border-top: 1px solid ${rgba(light.colors.fg, 0.08)};
+  @media (prefers-color-scheme: dark) {
+    border-top: 1px solid ${rgba(dark.colors.fg, 0.08)};
+  }
+`;
 const A = styled.a`
   display: flex;
   padding: 16px 0 40px;
-  border-top: 1px solid ${rgba('#000', 0.08)};
   align-items: flex-start;
-  @media (prefers-color-scheme: dark) {
-    border-top: 1px solid ${rgba('#fff', 0.08)};
-  }
 `;
 const Title = styled.h2`
   margin: 0;
@@ -32,16 +34,16 @@ const Content = styled.div``;
 const Date = styled.div`
   line-height: 32px;
   flex-basis: 80px;
-  color: ${rgba('#000', 0.64)};
+  color: ${rgba(light.colors.fg, 0.64)};
   @media (prefers-color-scheme: dark) {
-    color: ${(props) => rgba(props.theme.colors.text, 0.64)};
+    color: ${rgba(dark.colors.fg, 0.64)};
   }
 `;
 const Description = styled.p`
   margin: 4px 0 0;
-  color: ${rgba('#000', 0.64)};
+  color: ${rgba(light.colors.fg, 0.64)};
   @media (prefers-color-scheme: dark) {
-    color: ${(props) => rgba(props.theme.colors.text, 0.64)};
+    color: ${rgba(dark.colors.fg, 0.64)};
   }
 `;
 
