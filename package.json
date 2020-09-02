@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@types/styled-components": "5.1.2",
-    "dayjs": "1.8.34",
+    "dayjs": "1.8.35",
     "gray-matter": "4.0.2",
     "next": "9.4.4",
     "polished": "3.6.6",
