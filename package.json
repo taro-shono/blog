@@ -12,7 +12,7 @@
     "@types/styled-components": "5.1.4",
     "dayjs": "1.8.36",
     "gray-matter": "4.0.2",
-    "next": "9.4.4",
+    "next": "10.0.1",
     "polished": "3.6.7",
     "react": "16.13.1",
     "react-dom": "16.13.1",
