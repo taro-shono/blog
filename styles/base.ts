@@ -1,9 +1,7 @@
-import Sanitize from 'styled-sanitize.css';
 import { createGlobalStyle } from 'styled-components';
 import { dark, light } from '../themes';
 
 export const GlobalStyle = createGlobalStyle`
-  ${Sanitize};
   :root {
     --color-bg: ${light.colors.bg};
     --color-fg: ${light.colors.fg};
