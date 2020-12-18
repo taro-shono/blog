@@ -9,7 +9,7 @@
     "eslint": "eslint '.'"
   },
   "dependencies": {
-    "@types/styled-components": "5.1.6",
+    "@types/styled-components": "5.1.7",
     "dayjs": "1.9.7",
     "gray-matter": "4.0.2",
     "next": "10.0.3",
